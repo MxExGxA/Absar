@@ -3,7 +3,7 @@ import largeCardsData from "../constants/largeCardsData";
 
 const LargeCards = () => {
   return (
-    <div>
+    <div className="bg-lemon-green xl:bg-transparent py-5 rounded-none md:rounded-xl shadow-none md:shadow-[6px_-6px_0_#326149] xl:shadow-none">
       {largeCardsData.map((cardData) => (
         <LargeCard
           key={cardData.number}

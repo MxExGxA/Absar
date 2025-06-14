@@ -8,11 +8,11 @@ const TextureOverlay = ({
   return (
     <div className="relative">
       <Image
-        src={"/fabric2-texture.png"}
+        src={"/fabric-texture.png"}
         alt="fabric texture image"
         fill
         objectFit="cover"
-        className="z-50 mix-blend-multiply opacity-80 pointer-events-none"
+        className="z-50 mix-blend-soft-light opacity-25 pointer-events-none"
         unoptimized
         quality={100}
       />

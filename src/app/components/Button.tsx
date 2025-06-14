@@ -25,10 +25,10 @@ const Button = ({
         alt="button background"
         width={170}
         height={0}
-        className="w-auto"
+        className="w-32 sm:w-44"
       />
 
-      <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <span className="absolute text-sm sm:text-xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         {label}
       </span>
     </button>
