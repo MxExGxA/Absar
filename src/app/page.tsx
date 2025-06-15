@@ -25,7 +25,7 @@ export default function Home() {
           alt="hero section background"
           fill
           objectFit="cover"
-          className="absolute"
+          className="absolute pointer-events-none"
           loading="lazy"
         />
         <TextureOverlay>
