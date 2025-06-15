@@ -7,7 +7,7 @@ const TextureOverlay = ({
 }) => {
   return (
     <div className="relative">
-      <Image
+      {/* <Image
         src={"/fabric-texture.webp"}
         alt="fabric texture image"
         loading="lazy"
@@ -16,7 +16,7 @@ const TextureOverlay = ({
         className="z-50 mix-blend-soft-light opacity-25 pointer-events-none"
         unoptimized
         quality={100}
-      />
+      /> */}
       {children}
     </div>
   );
