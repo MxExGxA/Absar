@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import PreNav from "./components/PreNav";
-
+import { Toaster } from "react-hot-toast";
 const ghaith = localFont({
   src: "./fonts/GHAITHSANS.otf",
   variable: "--font-ghaith",
@@ -31,6 +31,7 @@ export default function RootLayout({
       >
         <PreNav />
         {children}
+        <Toaster />
       </body>
     </html>
   );

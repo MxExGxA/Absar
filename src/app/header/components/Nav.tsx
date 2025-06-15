@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import NavButton from "./NavButton";
-import Image from "next/image";
 import BurgerMenu from "./BurgerMenu";
+import UseInView from "@/app/hooks/useInView";
 
 const Nav = () => {
   const [navData, setNavData] = useState([
@@ -32,21 +32,22 @@ const Nav = () => {
     },
   ]);
 
-  const [scrollY, setScrollY] = useState(0);
+  const isHome = UseInView("#home", { threshold: 0.1 });
+  const isAbout = UseInView("#about", { threshold: 0.8 });
+  const isServices = UseInView("#services", { threshold: 0.8 });
+  const isContact = UseInView("#contact", { threshold: 0.8 });
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
+    if (isHome) handleNavButtonClick("#home");
+    if (isAbout) handleNavButtonClick("#about");
+    if (isServices) handleNavButtonClick("#services");
+    if (isContact) handleNavButtonClick("#contact");
+  }, [isHome, isAbout, isServices, isContact]);
 
-    window.addEventListener("scroll", handleScroll);
-    return () => removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const handleNavButtonClick = (id: number) => {
+  const handleNavButtonClick = (path: string) => {
     setNavData((prev) => {
       const newNavData = prev.map((ele) => {
-        if (ele.id !== id) {
+        if (ele.path !== path) {
           ele.selected = false;
         } else {
           ele.selected = true;
@@ -58,20 +59,8 @@ const Nav = () => {
   };
   return (
     <nav
-      className={`pt-3 pb-4 flex justify-between items-center sticky top-0 px-9 font-jf z-50 ${
-        scrollY >= 110 ? "bg-dark-green/60 backdrop-blur-2xl" : ""
-      }`}
+      className={`pt-3 pb-4 flex justify-between items-center px-9 font-jf z-50 bg-dark-green/60 backdrop-blur-2xl}`}
     >
-      {scrollY >= 110 ? (
-        <Image
-          src={"absar-logo.svg"}
-          alt="main absar logo"
-          height={0}
-          width={120}
-        />
-      ) : (
-        ""
-      )}
       <ul className="navbar hidden md:flex items-center space-x-2 text-white">
         {navData.map((ele) => (
           <NavButton
@@ -79,10 +68,11 @@ const Nav = () => {
             path={ele.path}
             title={ele.title}
             selected={ele.selected}
-            onClick={() => handleNavButtonClick(ele.id)}
+            onClick={() => handleNavButtonClick(ele.path)}
           />
         ))}
       </ul>
+      <div></div>
       <BurgerMenu />
     </nav>
   );

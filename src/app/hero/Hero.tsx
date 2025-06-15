@@ -5,7 +5,10 @@ import InsightCard from "./components/InsightCard";
 
 const Hero = () => {
   return (
-    <div className="relative flex items-center md:items-start justify-between flex-col-reverse 2xl:flex-row lg:items-center pb-20">
+    <div
+      // id="home"
+      className="relative flex items-center md:items-start justify-between flex-col-reverse 2xl:flex-row lg:items-center pb-20"
+    >
       <Image
         src={"/hero-scifi-col.svg"}
         alt="sci fi shapes"
@@ -46,8 +49,16 @@ const Hero = () => {
               </p>
             </div>
             <div className="space-x-4 flex justify-center sm:justify-start lg:justify-start">
-              <Button label="إتصل بنا" type="primary"></Button>
-              <Button label="المزيد" type="secondary"></Button>
+              <Button
+                label="تواصل معنا"
+                type="primary"
+                navigate="#contact"
+              ></Button>
+              <Button
+                navigate="#services"
+                label="المزيد"
+                type="secondary"
+              ></Button>
             </div>
           </div>
         </div>
@@ -101,6 +112,7 @@ const Hero = () => {
             alt="camera pattern background"
             fill
             className="absolute"
+            priority
           />
           <Image
             src={"/hero-camera.png"}
@@ -108,6 +120,7 @@ const Hero = () => {
             width={550}
             height={0}
             className="z-10 w-auto"
+            priority
           />
         </div>
       </div>

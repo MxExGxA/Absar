@@ -10,9 +10,9 @@ const AboutUs = () => {
           <h1 className="text-white text-3xl sm:text-4xl">
             من نحــن ؟
           </h1>
-          <h3 className="text-lemon-green text-xl sm:text-2xl">
+          <h2 className="text-lemon-green text-xl sm:text-2xl">
             تعــــرف على هويتــــنا ورؤيتـــــنا.
-          </h3>
+          </h2>
         </div>
       </div>
       <div className="flex flex-col items-center gap-16 2xl:ml-auto">

@@ -2,15 +2,32 @@ import Nav from "./header/components/Nav";
 import Header from "./header/Header";
 import Hero from "./hero/Hero";
 import LargeCards from "./large cards/LargeCards";
-import TextureOverlay from "./components/TextureOverlay";
 import AboutUs from "./about us/AboutUs";
 import OurServices from "./our services/OurServices";
 import ContactUs from "./contact us/ContactUs";
+import Footer from "./footer/Footer";
+import Chat from "./chat/Chat";
+import DynamicNav from "./header/components/DynamicNav";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+const TextureOverlay = dynamic(
+  () => import("./components/TextureOverlay")
+);
 
 export default function Home() {
   return (
     <main>
-      <div className="bg-[url('/hero-bg.png')] bg-cover bg-center">
+      <DynamicNav />
+      <Chat />
+      <div id="home">
+        <Image
+          src={"/hero-bg.webp"}
+          alt="hero section background"
+          fill
+          objectFit="cover"
+          className="absolute"
+          loading="lazy"
+        />
         <TextureOverlay>
           <Header />
           <Nav />
@@ -30,22 +47,29 @@ export default function Home() {
 
       {/* about us section */}
       <TextureOverlay>
-        <section className="px-10">
+        <section className="px-10" id="about">
           <AboutUs />
         </section>
       </TextureOverlay>
 
       {/* our services section */}
       <TextureOverlay>
-        <section className="px-10">
+        <section className="md:px-10" id="services">
           <OurServices />
         </section>
       </TextureOverlay>
 
       {/* contact us section */}
       <TextureOverlay>
-        <section className="px-10">
+        <section className="md:px-10" id="contact">
           <ContactUs />
+        </section>
+      </TextureOverlay>
+
+      {/* footer section */}
+      <TextureOverlay>
+        <section className="xl:px-10" id="footer">
+          <Footer />
         </section>
       </TextureOverlay>
     </main>

@@ -1,9 +1,18 @@
 @import "tailwindcss";
+@plugin "@midudev/tailwind-animations";
 
 :root {
   --dark-green: #224332;
   --light-green: #326149;
   --lemon-green: #b8d900;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 @theme inline {
