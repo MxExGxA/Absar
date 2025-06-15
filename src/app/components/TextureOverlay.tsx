@@ -1,4 +1,4 @@
-// import Image from "next/image";
+import Image from "next/image";
 
 const TextureOverlay = ({
   children,
@@ -7,16 +7,16 @@ const TextureOverlay = ({
 }) => {
   return (
     <div className="relative">
-      {/* <Image
-        src={"/fabric-texture.webp"}
-        alt="fabric texture image"
+      <Image
+        src={"/paper-texture.jpg"}
+        alt="paper texture image"
         loading="lazy"
         fill
         objectFit="cover"
-        className="z-50 mix-blend-soft-light opacity-25 pointer-events-none"
+        className="z-50 mix-blend-multiply opacity-50 pointer-events-none"
         unoptimized
         quality={100}
-      /> */}
+      />
       {children}
     </div>
   );
