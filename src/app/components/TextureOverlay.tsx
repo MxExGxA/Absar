@@ -8,8 +8,8 @@ const TextureOverlay = ({
   return (
     <div className="relative">
       <Image
-        src={"/paper-texture.jpg"}
-        alt="paper texture image"
+        src={"/fabric2-texture.png"}
+        alt="fabric texture image"
         loading="lazy"
         fill
         objectFit="cover"
