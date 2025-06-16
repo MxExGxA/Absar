@@ -1,16 +1,22 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroCard = ({
   number,
   title,
   image,
+  href,
 }: {
   number: string;
   title: string[];
   image: string;
+  href: string;
 }) => {
   return (
-    <div className="relative w-[170px] h-[206px] sm:w-[208px] sm:h-[244px]">
+    <Link
+      href={"#" + href}
+      className="relative w-[170px] h-[206px] sm:w-[208px] sm:h-[244px] hover:scale-95 active:scale-90 transition-transform"
+    >
       {/* card sci-fi shapes */}
       <Image
         src={"/card-scifi-col.svg"}
@@ -55,7 +61,7 @@ const HeroCard = ({
           className="absolute bottom-4 w-[80%]"
         />
       </div>
-    </div>
+    </Link>
   );
 };
 

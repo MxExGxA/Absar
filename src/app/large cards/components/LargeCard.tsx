@@ -1,12 +1,14 @@
 import Image from "next/image";
 
 const LargeCard = ({
+  id,
   direction,
   number,
   title,
   desc,
   image,
 }: {
+  id: string;
   direction: "left" | "right";
   number: string;
   title: string;
@@ -14,7 +16,10 @@ const LargeCard = ({
   image: string;
 }) => {
   return (
-    <div className="relative my-0 mb-10 lg:my-5 xl:my-15 h-fit">
+    <div
+      id={id}
+      className="relative my-0 mb-10 lg:my-5 xl:my-15 h-fit"
+    >
       <Image
         src={
           direction === "left"

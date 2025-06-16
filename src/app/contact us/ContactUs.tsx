@@ -43,7 +43,6 @@ const ContactUs = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
-            sandbox="allow-scripts"
           ></iframe>
         </div>
         <div className="font-jf">

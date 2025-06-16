@@ -65,21 +65,25 @@ const Hero = () => {
         {/* hero cards */}
         <div className="flex flex-wrap gap-2 sm:gap-8 mt-10 justify-center md:justify-start lg:justify-start">
           <HeroCard
+            href="01"
             number={"01"}
             title={["أنظِـــــــــمة", "المــــــرَاقبة"]}
             image="/hero-card-cctv.png"
           />
           <HeroCard
+            href="02"
             number={"02"}
             title={["أنظــــــــــمة", "الحــــــــــرِيق"]}
             image="/hero-card-fire-alert.png"
           />
           <HeroCard
+            href="03"
             number={"03"}
             title={["أنظِمة المَنزل ", "الذكِـــــــــــي"]}
             image="/hero-card-smart-home.png"
           />
           <HeroCard
+            href="04"
             number={"04"}
             title={["أنظِمة التَحكم", " فِي الدُخــــــول"]}
             image="/hero-card-access-control.png"
