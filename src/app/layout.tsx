@@ -22,22 +22,22 @@ export const metadata: Metadata = {
     title: "أبصـر | لأنظمة المراقبة والأمان",
     description:
       "24/7 أحدث أنظمة الأمان و المراقبة، تركيب وصيانة كاميرات المراقبة، أنظمة دخول ذكية وإنذار حريق في المدينة المنورة. ضمان، دقة، دعم",
-    url: "https://absar-two.vercel.app/",
+    url: "https://www.absar.sa/",
     siteName: "أبصر",
     locale: "ar_SA",
     type: "website",
     images: [
       {
-        url: "https://absar-two.vercel.app/og-image.png",
+        url: "https://www.absar.sa/og-image.png",
         width: 1200,
         height: 630,
         alt: "أبصر - أنظمة المراقبة والأمان",
       },
     ],
   },
-  metadataBase: new URL("https://absar.sa"),
+  metadataBase: new URL("https://www.absar.sa"),
   alternates: {
-    canonical: "https://absar.sa",
+    canonical: "https://www.absar.sa",
   },
 };
 

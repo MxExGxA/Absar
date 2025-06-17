@@ -3,6 +3,7 @@ import FooterList from "./components/FooterList";
 import Link from "next/link";
 import { IoIosCall } from "react-icons/io";
 import { FaWhatsapp } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 
 const Footer = () => {
   return (
@@ -88,6 +89,13 @@ const Footer = () => {
               >
                 <FaWhatsapp />
                 <p>966558455133</p>
+              </Link>
+              <Link
+                href={"mailto:support@absar.sa"}
+                className="flex items-center space-x-2 hover:opacity-80"
+              >
+                <IoIosMail />
+                <p>support@absar.sa</p>
               </Link>
             </FooterList>
           </div>

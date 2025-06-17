@@ -110,7 +110,7 @@ const Hero = () => {
       </div>
       {/* left */}
       <div className="relative flex-1 flex justify-center items-center">
-        <div className="flex justify-start items-center w-[250px] sm:w-[350px] lg:w-[550px] aspect-square">
+        <div className="flex justify-start items-center w-[250px] sm:w-[350px] lg:w-[500px]  aspect-[3.5/4]">
           <Image
             src={"/camera-background.svg"}
             alt="camera pattern background"
