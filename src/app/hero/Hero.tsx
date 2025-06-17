@@ -110,20 +110,18 @@ const Hero = () => {
       </div>
       {/* left */}
       <div className="relative flex-1 flex justify-center items-center">
-        <div className="flex justify-start items-center">
+        <div className="flex justify-start items-center w-[250px] sm:w-[350px] lg:w-[550px] aspect-square">
           <Image
             src={"/camera-background.svg"}
             alt="camera pattern background"
             fill
-            className="absolute"
             loading="lazy"
           />
           <Image
             src={"/hero-camera.png"}
             alt="cctv camera image"
-            width={550}
-            height={0}
-            className="z-10 w-auto"
+            fill
+            className="z-10 w-full object-contain"
             loading="lazy"
           />
         </div>
