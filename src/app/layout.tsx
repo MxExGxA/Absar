@@ -14,9 +14,10 @@ const jfFlat = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "ABSAR - أبصــر",
+  title: "أبصــر | أحدث أنظمة المراقبة والأمان في السعودية",
   icons: ["/favicon.svg"],
-  description: "أحدث أنظمة المراقبة والأمان في السعودية",
+  description:
+    "24/7 أحدث أنظمة الأمان و المراقبة، تركيب وصيانة كاميرات المراقبة، أنظمة دخول ذكية وإنذار حريق في المدينة المنورة. ضمان، دقة، دعم",
 };
 
 export default function RootLayout({
