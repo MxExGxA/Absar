@@ -1,6 +1,6 @@
 const schema = {
   "@context": "https://schema.org",
-  "@type": "SecurityService",
+  "@type": "LocalBusiness",
   name: "أبصر لأنظمة الأمان والمراقبة",
   alternateName: "Absar",
   url: "https://www.absar.sa",
