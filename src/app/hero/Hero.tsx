@@ -116,7 +116,7 @@ const Hero = () => {
             alt="camera pattern background"
             fill
             className="absolute"
-            priority
+            loading="lazy"
           />
           <Image
             src={"/hero-camera.png"}
@@ -124,7 +124,7 @@ const Hero = () => {
             width={550}
             height={0}
             className="z-10 w-auto"
-            priority
+            loading="lazy"
           />
         </div>
       </div>
