@@ -19,27 +19,27 @@ const jfFlat = localFont({
 export const metadata: Metadata = {
   title: "أبصـر | لأنظمة الأمان و المراقبة",
   description:
-    "24/7 أحدث أنظمة الأمان و المراقبة، تركيب وصيانة كاميرات المراقبة، أنظمة دخول ذكية وإنذار حريق في المدينة المنورة. ضمان، دقة، دعم",
+    "أحدث أنظمة الأمان و المراقبة، تركيب وصيانة كاميرات المراقبة، أنظمة دخول ذكية وإنذار حريق في المدينة المنورة. ضمان، دقة، دعم علي مدار 24 ساعة طوال الأسبوع",
   openGraph: {
     title: "أبصـر | لأنظمة الأمان و المراقبة",
     description:
-      "24/7 أحدث أنظمة الأمان و المراقبة، تركيب وصيانة كاميرات المراقبة، أنظمة دخول ذكية وإنذار حريق في المدينة المنورة. ضمان، دقة، دعم",
-    url: "https://www.absar.sa/",
+      "أحدث أنظمة الأمان و المراقبة، تركيب وصيانة كاميرات المراقبة، أنظمة دخول ذكية وإنذار حريق في المدينة المنورة. ضمان، دقة، دعم علي مدار 24 ساعة طوال الأسبوع",
+    url: "https://absar.sa/",
     siteName: "أبصر",
     locale: "ar_SA",
     type: "website",
     images: [
       {
-        url: "https://www.absar.sa/og-image.png",
+        url: "https://absar.sa/og-image.png",
         width: 1200,
         height: 630,
         alt: "أبصر - أنظمة المراقبة والأمان",
       },
     ],
   },
-  metadataBase: new URL("https://www.absar.sa"),
+  metadataBase: new URL("https://absar.sa"),
   alternates: {
-    canonical: "https://www.absar.sa",
+    canonical: "https://absar.sa",
   },
 };
 

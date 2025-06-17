@@ -3,9 +3,9 @@ const schema = {
   "@type": "LocalBusiness",
   name: "أبصر لأنظمة الأمان والمراقبة",
   alternateName: "Absar",
-  url: "https://www.absar.sa",
-  logo: "https://www.absar.sa/logo.png",
-  image: "https://www.absar.sa/og-image.png",
+  url: "https://absar.sa",
+  logo: "https://absar.sa/logo.png",
+  image: "https://absar.sa/og-image.png",
   description:
     "شركة سعودية متخصصة في أنظمة المراقبة والأمان، تشمل كاميرات المراقبة، أنظمة الدخول، المنزل الذكي، وإنذارات الحريق.",
   address: {
