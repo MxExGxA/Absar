@@ -18,7 +18,6 @@ const jfFlat = localFont({
 
 export const metadata: Metadata = {
   title: "أبصـر | لأنظمة الأمان و المراقبة",
-  icons: ["/favicon.svg"],
   description:
     "24/7 أحدث أنظمة الأمان و المراقبة، تركيب وصيانة كاميرات المراقبة، أنظمة دخول ذكية وإنذار حريق في المدينة المنورة. ضمان، دقة، دعم",
   openGraph: {
