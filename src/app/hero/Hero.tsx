@@ -120,7 +120,7 @@ const Hero = () => {
           />
           <Image
             src={"/hero-camera.png"}
-            alt="camera pattern background"
+            alt="cctv camera image"
             width={550}
             height={0}
             className="z-10 w-auto"
