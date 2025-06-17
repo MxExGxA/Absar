@@ -18,6 +18,27 @@ export const metadata: Metadata = {
   icons: ["/favicon.svg"],
   description:
     "24/7 أحدث أنظمة الأمان و المراقبة، تركيب وصيانة كاميرات المراقبة، أنظمة دخول ذكية وإنذار حريق في المدينة المنورة. ضمان، دقة، دعم",
+  openGraph: {
+    title: "أبصــر | أنظمة مراقبة وكاميرات أمان في المدينة المنورة",
+    description:
+      "تركيب كاميرات، إنذارات الحريق، تحكم في الدخول، منزل ذكي، مع دعم فني 24/7. أبصر لحلول الأمان الذكية.",
+    url: "https://absar.sa",
+    siteName: "أبصر",
+    locale: "ar_SA",
+    type: "website",
+    images: [
+      {
+        url: "https://absar.sa/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "أبصر - أنظمة المراقبة والأمان",
+      },
+    ],
+  },
+  metadataBase: new URL("https://absar.sa"),
+  alternates: {
+    canonical: "https://absar.sa",
+  },
 };
 
 export default function RootLayout({
