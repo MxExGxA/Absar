@@ -23,7 +23,7 @@ const FloatingCircle = ({
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 1 }}
-        className={`${className} w-16 h-16 bg-white rounded-full border-2 border-lemon-green flex items-center justify-center cursor-pointer`}
+        className={`${className} w-14 h-14 bg-light-green rounded-full border-2 border-lemon-green flex items-center justify-center cursor-pointer`}
       >
         {icon}
       </motion.div>

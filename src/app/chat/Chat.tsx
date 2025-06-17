@@ -9,13 +9,13 @@ const Chat = () => {
       <FloatingCircle
         title="واتساب"
         link="https://api.whatsapp.com/send?phone=966558455133"
-        icon={<FaWhatsapp className="text-4xl text-light-green" />}
+        icon={<FaWhatsapp className="text-4xl text-lemon-green" />}
       />
 
       <FloatingCircle
         title="تليفون"
         link="tel:966558455133"
-        icon={<IoIosCall className="text-3xl text-light-green" />}
+        icon={<IoIosCall className="text-3xl text-lemon-green" />}
       />
     </div>
   );
