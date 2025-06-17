@@ -91,11 +91,11 @@ const Footer = () => {
                 <p>966558455133</p>
               </Link>
               <Link
-                href={"mailto:support@absar.sa"}
+                href={"mailto:contact@absar.sa"}
                 className="flex items-center space-x-2 hover:opacity-80"
               >
                 <IoIosMail />
-                <p>support@absar.sa</p>
+                <p>contact@absar.sa</p>
               </Link>
             </FooterList>
           </div>
