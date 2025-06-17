@@ -3,6 +3,9 @@ import localFont from "next/font/local";
 import "./globals.css";
 import PreNav from "./components/PreNav";
 import { Toaster } from "react-hot-toast";
+import Script from "next/script";
+import schema from "./schema";
+
 const ghaith = localFont({
   src: "./fonts/GHAITHSANS.otf",
   variable: "--font-ghaith",
@@ -54,6 +57,14 @@ export default function RootLayout({
         <PreNav />
         {children}
         <Toaster />
+        <Script
+          id="schema-org"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schema),
+          }}
+        />
       </body>
     </html>
   );
