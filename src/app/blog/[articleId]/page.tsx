@@ -8,6 +8,33 @@ import { FaRegClock, FaRegUser } from "react-icons/fa";
 import { GiDuration } from "react-icons/gi";
 import ArticleCard from "../components/ArticleCard";
 import { articleType } from "../types/Article";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { articleId: string };
+}): Promise<Metadata> {
+  const { articleId } = await params;
+
+  const decoded = decodeURIComponent(articleId).replaceAll("-", " ");
+  const encoded = encodeURIComponent(decoded);
+
+  const result = await axios.get(
+    `${process.env.STRAPI_URI}/api/article?filters[title][$eq]=${encoded}`
+  );
+  const article = await result.data;
+
+  return {
+    title: article.data[0].title,
+    description: article.data[0].description,
+    openGraph: {
+      title: article.data[0].title,
+      description: article.data[0].description,
+      images: [article.data[0].cover],
+    },
+  };
+}
 
 const page = async ({ params }) => {
   const { articleId } = await params;

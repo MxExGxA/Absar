@@ -1,6 +1,22 @@
 import ArticleCard from "./components/ArticleCard";
 import axios from "axios";
 import { articleType } from "./types/Article";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { articleId: string };
+}): Promise<Metadata> {
+  return {
+    title: "المدونة",
+    description: "مدونة ابصر | كل ما يخص أنظمة الأمان والمراقبة",
+    openGraph: {
+      title: "المدونة",
+      description: "مدونة ابصر | كل ما يخص أنظمة الأمان والمراقبة",
+    },
+  };
+}
 
 const page = async () => {
   const result = await axios.get(
