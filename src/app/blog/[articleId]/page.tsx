@@ -15,7 +15,7 @@ export async function generateMetadata({
 }: {
   params: { articleId: string };
 }): Promise<Metadata> {
-  const { articleId } = await params;
+  const { articleId } = params;
 
   const decoded = decodeURIComponent(articleId).replaceAll("-", " ");
   const encoded = encodeURIComponent(decoded);
