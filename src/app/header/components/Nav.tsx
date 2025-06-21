@@ -30,6 +30,12 @@ const Nav = () => {
       title: "تواصل معنا",
       selected: false,
     },
+    {
+      id: 5,
+      path: "/blog",
+      title: "المدونـة",
+      selected: false,
+    },
   ]);
 
   const isHome = UseInView("#home", { threshold: 0.1 });
@@ -59,7 +65,7 @@ const Nav = () => {
   };
   return (
     <nav
-      className={`pt-3 pb-4 flex justify-between items-center px-9 font-jf z-50 backdrop-blur-2xl}`}
+      className={`pt-3 pb-4 flex justify-between items-center px-5 md:px-9 font-jf z-50 backdrop-blur-2xl}`}
     >
       <ul className="navbar hidden md:flex items-center space-x-2 text-white">
         {navData.map((ele) => (

@@ -1,9 +1,10 @@
 "use client";
-import Link from "next/link";
+
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import Link from "next/link";
 
-const BurgerMenu = () => {
+const BlogBurger = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   useEffect(() => {
@@ -59,19 +60,7 @@ const BurgerMenu = () => {
       >
         <ul className="flex flex-col items-center space-y-10 text-4xl">
           <li>
-            <Link href={"#home"}>الرئيــسية</Link>
-          </li>
-          <li>
-            <Link href={"#about"}>مـن نحــن</Link>
-          </li>
-          <li>
-            <Link href={"#services"}>خدماتنـــا</Link>
-          </li>
-          <li>
-            <Link href={"#contact"}>تواصـل معـنا</Link>
-          </li>
-          <li>
-            <Link href={"/blog"}>المدونــة </Link>
+            <Link href={"/"}>الرئيــسية</Link>
           </li>
         </ul>
       </motion.div>
@@ -79,4 +68,4 @@ const BurgerMenu = () => {
   );
 };
 
-export default BurgerMenu;
+export default BlogBurger;

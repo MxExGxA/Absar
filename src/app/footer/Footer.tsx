@@ -68,6 +68,9 @@ const Footer = () => {
               <Link className="hover:opacity-80" href={"#contact"}>
                 تواصل معنا
               </Link>
+              <Link className="hover:opacity-80" href={"/blog"}>
+                المدونــة
+              </Link>
             </FooterList>
           </div>
           <div>

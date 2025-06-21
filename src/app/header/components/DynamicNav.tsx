@@ -74,7 +74,7 @@ const DynamicNav = () => {
       <nav
         className={`${
           scrollY < 110 ? "hidden" : ""
-        } pt-3 pb-4 flex justify-between items-center fixed w-full top-0 left-0 px-9 font-jf z-50 bg-dark-green/60 backdrop-blur-2xl`}
+        } pt-3 pb-4 flex justify-between items-center fixed w-full top-0 left-0 px-5 md:px-9 font-jf z-50 bg-dark-green/60 backdrop-blur-2xl`}
       >
         {scrollY >= 110 ? (
           <Image

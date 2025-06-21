@@ -18,7 +18,6 @@ export default function Home() {
   return (
     <main>
       <DynamicNav />
-      <Chat />
       <div id="home">
         <Image
           src={"/hero-bg.webp"}

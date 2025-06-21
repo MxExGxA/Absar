@@ -5,6 +5,7 @@ import PreNav from "./components/PreNav";
 import { Toaster } from "react-hot-toast";
 import Script from "next/script";
 import schema from "./schema";
+import Chat from "./chat/Chat";
 
 const ghaith = localFont({
   src: "./fonts/GHAITHSANS.otf",
@@ -54,6 +55,7 @@ export default function RootLayout({
         className={`bg-dark-green ${ghaith.variable} ${jfFlat.variable}`}
       >
         <PreNav />
+        <Chat />
         {children}
         <Toaster />
         <Script

@@ -1,5 +1,7 @@
+"use client";
 import { MouseEventHandler } from "react";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const NavButton = ({
   path,
@@ -10,11 +12,11 @@ const NavButton = ({
   path: string;
   title: string;
   selected: boolean;
-  onClick: MouseEventHandler<HTMLAnchorElement>;
+  onClick?: MouseEventHandler<HTMLAnchorElement>;
 }) => {
   return (
     <motion.li whileHover={!selected ? { opacity: 0.8 } : ""}>
-      <motion.a
+      <Link
         className={`py-2 px-3 rounded-sm ${
           selected
             ? "text-dark-green bg-white shadow-[3px_-3px_0_#b8d900]"
@@ -24,7 +26,7 @@ const NavButton = ({
         onClick={onClick}
       >
         {title}
-      </motion.a>
+      </Link>
     </motion.li>
   );
 };
