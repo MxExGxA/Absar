@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const BlogFooter = () => {
   return (
-    <div className="h-20 bg-lemon-green flex items-center justify-center">
+    <div className="absolute bottom-0 w-full h-20 bg-lemon-green flex items-center justify-center">
       <p className="text-nowrap text-center text-sm sm:text-[16px] font-jf text-light-green">
         © 2025 جميع الحقوق محفوظة – أبصر
         <br />
