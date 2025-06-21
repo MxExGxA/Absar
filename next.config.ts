@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
     domains: ["localhost"],
   },
   env: {
-    STRAPI_URI: "http://localhost:1337",
+    STRAPI_URI: "https://exuberant-life-aa8cf8724b.strapiapp.com/",
   },
   // output: "export",
 };
