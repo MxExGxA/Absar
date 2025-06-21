@@ -12,10 +12,8 @@ import { Metadata } from "next";
 
 export async function generateMetadata({
   params,
-}: {
-  params: { articleId: string };
 }): Promise<Metadata> {
-  const { articleId } = params;
+  const { articleId } = await params;
 
   const decoded = decodeURIComponent(articleId).replaceAll("-", " ");
   const encoded = encodeURIComponent(decoded);
