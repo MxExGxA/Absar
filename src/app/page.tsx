@@ -9,7 +9,6 @@ import Footer from "./footer/Footer";
 import DynamicNav from "./header/components/DynamicNav";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import Chat from "./chat/Chat";
 const TextureOverlay = dynamic(
   () => import("./components/TextureOverlay")
 );

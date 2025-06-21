@@ -2,7 +2,6 @@ import Image from "next/image";
 import Header from "../header/Header";
 import BlogNav from "./components/BlogNav";
 import BlogDynamicNav from "./components/BlogDynamicNav";
-import Footer from "../footer/Footer";
 import BlogFooter from "./components/BlogFooter";
 
 export default function Layout({

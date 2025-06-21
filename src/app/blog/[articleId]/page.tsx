@@ -7,6 +7,7 @@ import {
 import { FaRegClock, FaRegUser } from "react-icons/fa";
 import { GiDuration } from "react-icons/gi";
 import ArticleCard from "../components/ArticleCard";
+import { articleType } from "../types/Article";
 
 const page = async ({ params }) => {
   const { articleId } = await params;
@@ -59,7 +60,7 @@ const page = async ({ params }) => {
       <div className="w-full xl:w-96 flex flex-col gap-5">
         <h2 className="text-white text-2xl">مقالات قد تهمك أيضاً</h2>
 
-        {articles?.data.map((art: any, index: number) =>
+        {articles?.data.map((art: articleType, index: number) =>
           index < 6 && art.title !== article.data[0].title ? (
             <ArticleCard key={art.id} data={art} type="small" />
           ) : (

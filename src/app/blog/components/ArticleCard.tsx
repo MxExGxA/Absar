@@ -4,17 +4,7 @@ import { FaRegUser } from "react-icons/fa";
 import { GiDuration } from "react-icons/gi";
 import { FaRegClock } from "react-icons/fa";
 import Link from "next/link";
-
-type articleType = {
-  id: number;
-  author: string;
-  title: string;
-  duration: number;
-  cover: { url: string };
-  content: any[];
-  createdAt: string;
-  description: string;
-};
+import { articleType } from "../types/Article";
 
 const ArticleCard = ({
   data,

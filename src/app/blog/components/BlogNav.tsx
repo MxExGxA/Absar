@@ -1,5 +1,4 @@
 import NavButton from "@/app/header/components/NavButton";
-import React, { useState } from "react";
 import BlogBurger from "./BlogBurger";
 
 const BlogNav = () => {

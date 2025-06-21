@@ -1,5 +1,6 @@
 import ArticleCard from "./components/ArticleCard";
 import axios from "axios";
+import { articleType } from "./types/Article";
 
 const page = async () => {
   const result = await axios.get(
@@ -17,7 +18,7 @@ const page = async () => {
         </p>
       </div>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-5 py-10">
-        {articles?.data.map((article: any, index: number) => (
+        {articles?.data.map((article: articleType, index: number) => (
           <ArticleCard
             key={article.id}
             data={article}
