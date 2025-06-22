@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://absar.sa
+
+# Sitemaps
+Sitemap: https://absar.sa/sitemap.xml
