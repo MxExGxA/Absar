@@ -17,8 +17,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { articleId } = await params;
 
-  const decoded = decodeURIComponent(articleId).replaceAll("-", " ");
-  const encoded = encodeURIComponent(decoded);
+  const decoded = decodeURIComponent(articleId);
+  const encoded = encodeURIComponent(decoded.replaceAll("-", " "));
 
   const result = await axiosInstance.get(
     `/api/article?filters[title][$eq]=${encoded}`
@@ -32,6 +32,9 @@ export async function generateMetadata({
       title: article.data[0].title,
       description: article.data[0].description,
       images: [article.data[0].cover],
+    },
+    alternates: {
+      canonical: decoded,
     },
   };
 }

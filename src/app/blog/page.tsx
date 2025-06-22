@@ -13,6 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: "المدونة",
       description: "مدونة ابصر | كل ما يخص أنظمة الأمان والمراقبة",
     },
+    alternates: { canonical: "https://absar.sa/blog" },
   };
 }
 
