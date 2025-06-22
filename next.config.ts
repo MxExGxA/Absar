@@ -4,10 +4,10 @@ const nextConfig: NextConfig = {
   /* config options here */
   images: {
     formats: ["image/avif", "image/webp"],
-    domains: ["exuberant-life-aa8cf8724b.media.strapiapp.com"],
+    domains: ["admin.absar.sa"],
   },
   env: {
-    STRAPI_URI: "https://exuberant-life-aa8cf8724b.strapiapp.com",
+    STRAPI_URI: "https://admin.absar.sa",
   },
   // output: "export",
 };
