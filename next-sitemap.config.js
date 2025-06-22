@@ -1,5 +1,12 @@
 const siteUrl = "https://absar.sa";
 
+const staticUrls = {
+  loc: `https://admin.absar.sa/blog`,
+  changefreq: "weekly",
+  priority: 0.8,
+  lastmod: new Date().toISOString(),
+};
+
 async function fetchBlogUrls() {
   try {
     const res = await fetch(`https://admin.absar.sa/api/article`, {
@@ -42,11 +49,14 @@ module.exports = {
   additionalPaths: async (config) => {
     const blogUrls = await fetchBlogUrls();
 
-    return blogUrls.map((url) => ({
-      loc: url,
-      changefreq: "weekly",
-      priority: 0.7,
-      lastmod: new Date().toISOString(),
-    }));
+    return [
+      ...staticUrls,
+      ...blogUrls.map((url) => ({
+        loc: url,
+        changefreq: "weekly",
+        priority: 0.7,
+        lastmod: new Date().toISOString(),
+      })),
+    ];
   },
 };
