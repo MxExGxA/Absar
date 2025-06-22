@@ -30,7 +30,7 @@ const ArticleCard = ({
           <div className="absolute w-full h-full bg-gradient-to-b from-transparent to-black z-10"></div>
         )}
         <Image
-          src={data.cover.url}
+          src={process.env.STRAPI_URI + data.cover.url}
           alt="article cover"
           fill
           className="object-cover w-full"
