@@ -10,6 +10,8 @@ import { articleType } from "../types/Article";
 import { Metadata } from "next";
 import axiosInstance from "@/app/lib/axios";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({
   params,
 }): Promise<Metadata> {

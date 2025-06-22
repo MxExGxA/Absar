@@ -3,6 +3,8 @@ import { articleType } from "./types/Article";
 import { Metadata } from "next";
 import axiosInstance from "../lib/axios";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "المدونة",
