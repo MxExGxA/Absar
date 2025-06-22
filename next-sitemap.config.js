@@ -2,7 +2,7 @@ const siteUrl = "https://absar.sa";
 
 const staticUrls = [
   {
-    loc: `https://admin.absar.sa/blog`,
+    loc: `https://absar.sa/blog`,
     changefreq: "weekly",
     priority: 0.8,
     lastmod: new Date().toISOString(),
