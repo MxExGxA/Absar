@@ -1,4 +1,3 @@
-import axios from "axios";
 import { redirect } from "next/navigation";
 import {
   BlocksRenderer,
@@ -9,6 +8,7 @@ import { GiDuration } from "react-icons/gi";
 import ArticleCard from "../components/ArticleCard";
 import { articleType } from "../types/Article";
 import { Metadata } from "next";
+import axiosInstance from "@/app/lib/axios";
 
 export async function generateMetadata({
   params,
@@ -18,8 +18,8 @@ export async function generateMetadata({
   const decoded = decodeURIComponent(articleId).replaceAll("-", " ");
   const encoded = encodeURIComponent(decoded);
 
-  const result = await axios.get(
-    `${process.env.STRAPI_URI}/api/article?filters[title][$eq]=${encoded}`
+  const result = await axiosInstance.get(
+    `/api/article?filters[title][$eq]=${encoded}`
   );
   const article = await result.data;
 
@@ -40,8 +40,8 @@ const page = async ({ params }) => {
   const decoded = decodeURIComponent(articleId).replaceAll("-", " ");
   const encoded = encodeURIComponent(decoded);
 
-  const result = await axios.get(
-    `${process.env.STRAPI_URI}/api/article?filters[title][$eq]=${encoded}`
+  const result = await axiosInstance.get(
+    `/api/article?filters[title][$eq]=${encoded}`
   );
   const article = await result.data;
 
@@ -49,8 +49,8 @@ const page = async ({ params }) => {
     redirect("/blog");
   }
 
-  const result2 = await axios.get(
-    `${process.env.STRAPI_URI}/api/article?populate=cover`
+  const result2 = await axiosInstance.get(
+    `/api/article?populate=cover`
   );
   const articles = await result2.data;
 

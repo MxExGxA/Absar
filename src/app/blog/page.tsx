@@ -1,7 +1,7 @@
 import ArticleCard from "./components/ArticleCard";
-import axios from "axios";
 import { articleType } from "./types/Article";
 import { Metadata } from "next";
+import axiosInstance from "../lib/axios";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -15,8 +15,8 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const page = async () => {
-  const result = await axios.get(
-    `${process.env.STRAPI_URI}/api/article?populate=cover`
+  const result = await axiosInstance.get(
+    `/api/article?populate=cover`
   );
   const articles = await result.data;
   console.log(articles);
