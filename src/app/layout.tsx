@@ -62,6 +62,11 @@ export default function RootLayout({
         {children}
         <Toaster />
         <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="7aooS6ycg4s3Uj0CG6Qa3A"
+          async
+        ></Script>
+        <Script
           id="schema-org"
           type="application/ld+json"
           strategy="afterInteractive"
