@@ -34,7 +34,7 @@ export async function generateMetadata({
       images: [article.data[0].cover],
     },
     alternates: {
-      canonical: decoded,
+      canonical: `https://absar.sa/blog/${decoded}`,
     },
   };
 }
