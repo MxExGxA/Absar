@@ -30,6 +30,8 @@ export async function generateMetadata({
       title: article.data[0].title,
       description: article.data[0].description,
       images: [article.data[0].cover],
+      type: "article",
+      url: `https://absar.sa/blog/${decoded}`,
     },
     alternates: {
       canonical: `https://absar.sa/blog/${decoded}`,

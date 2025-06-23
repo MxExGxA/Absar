@@ -12,6 +12,17 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: "المدونة",
       description: "مدونة ابصر | كل ما يخص أنظمة الأمان والمراقبة",
+      url: "https://absar.sa/blog",
+      locale: "ar_SA",
+      type: "website",
+      images: [
+        {
+          url: "https://absar.sa/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: "أبصر - أنظمة المراقبة والأمان",
+        },
+      ],
     },
     alternates: { canonical: "https://absar.sa/blog" },
   };
