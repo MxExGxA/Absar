@@ -18,10 +18,9 @@ export async function generateMetadata({
   const encoded = encodeURIComponent(decoded.replaceAll("-", " "));
 
   const result = await axiosInstance.get(
-    `/api/article?filters[title][$eq]=${encoded}`
+    `/api/article?filters[title][$eq]=${encoded}&populate=cover`
   );
   const article = await result.data;
-  console.log(article);
 
   return {
     title: article.data[0].title,
@@ -31,7 +30,7 @@ export async function generateMetadata({
       description: article.data[0].description,
       images: [
         {
-          url: article.data[0].cover,
+          url: `${process.env.STRAPI_URI}${article.data[0]?.cover?.url}`,
           width: 1200,
           height: 630,
           alt: article.data[0].title,
