@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "المدونة",
+    title: "مدونة أبصر | أنظمة الأمان والمراقبة",
     description: "مدونة ابصر | كل ما يخص أنظمة الأمان والمراقبة",
     openGraph: {
       title: "المدونة",
