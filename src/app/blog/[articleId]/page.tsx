@@ -29,7 +29,14 @@ export async function generateMetadata({
     openGraph: {
       title: article.data[0].title,
       description: article.data[0].description,
-      images: [article.data[0].cover],
+      images: [
+        {
+          url: article.data[0].cover,
+          width: 1200,
+          height: 630,
+          alt: article.data[0].title,
+        },
+      ],
       type: "article",
       url: `https://absar.sa/blog/${decoded}`,
     },
