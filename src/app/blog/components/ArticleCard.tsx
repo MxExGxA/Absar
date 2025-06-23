@@ -54,9 +54,9 @@ const ArticleCard = ({
           </div>
         </div>
         <div>
-          <h1 className="font-ghaith text-lg line-clamp-1 mb-2">
+          <h2 className="font-ghaith text-lg line-clamp-1 mb-2">
             {data.title}
-          </h1>
+          </h2>
           <p className="line-clamp-3">{data.description}</p>
         </div>
       </div>
