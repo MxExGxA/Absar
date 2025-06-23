@@ -1,14 +1,11 @@
 import { redirect } from "next/navigation";
-import {
-  BlocksRenderer,
-  type BlocksContent,
-} from "@strapi/blocks-react-renderer";
 import { FaRegClock, FaRegUser } from "react-icons/fa";
 import { GiDuration } from "react-icons/gi";
 import ArticleCard from "../components/ArticleCard";
 import { articleType } from "../types/Article";
 import { Metadata } from "next";
 import axiosInstance from "@/app/lib/axios";
+import BlockContainer from "../components/BlockContainer";
 
 export const dynamic = "force-dynamic";
 
@@ -24,6 +21,7 @@ export async function generateMetadata({
     `/api/article?filters[title][$eq]=${encoded}`
   );
   const article = await result.data;
+  console.log(article);
 
   return {
     title: article.data[0].title,
@@ -83,9 +81,7 @@ const page = async ({ params }) => {
         </div>
 
         <div className="h-[2px] bg-white my-5 rounded-full hidden md:block"></div>
-        <BlocksRenderer
-          content={article.data[0].content as BlocksContent}
-        />
+        <BlockContainer data={article} />
       </div>
       <div className="w-full xl:w-96 flex flex-col gap-5">
         <h2 className="text-white text-2xl">مقالات قد تهمك أيضاً</h2>
