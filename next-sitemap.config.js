@@ -9,6 +9,15 @@ const staticUrls = [
   },
 ];
 
+const excludeUrls = [
+  "/sitemap.xml",
+  "/robots.txt",
+  "/icon1.png",
+  "/icon0.svg",
+  "/apple-icon.png",
+  "/manifest.json",
+];
+
 async function fetchBlogUrls() {
   try {
     const res = await fetch(`https://admin.absar.sa/api/article`, {
@@ -31,15 +40,10 @@ async function fetchBlogUrls() {
 module.exports = {
   siteUrl,
   generateRobotsTxt: true,
-  exclude: ["/sitemap.xml", "/robots.txt"],
+  exclude: excludeUrls,
 
   // Dynamically transform all URLs
   transform: async (config, url) => {
-    // Skip unwanted utility URLs
-    if (url.includes("sitemap.xml") || url.includes("robots.txt")) {
-      return null;
-    }
-
     return {
       loc: url,
       changefreq: "weekly",
