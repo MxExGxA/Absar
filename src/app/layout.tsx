@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import Script from "next/script";
 import schema from "./schema";
 import Chat from "./chat/Chat";
+import Head from "next/head";
 
 const ghaith = localFont({
   src: "./fonts/GHAITHSANS.otf",
@@ -54,6 +55,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
+      <Head>
+        <meta name="apple-mobile-web-app-title" content="absar" />
+      </Head>
       <body
         className={`bg-dark-green ${ghaith.variable} ${jfFlat.variable}`}
       >
