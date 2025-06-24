@@ -2,6 +2,7 @@ import ArticleCard from "./components/ArticleCard";
 import { articleType } from "./types/Article";
 import { Metadata } from "next";
 import axiosInstance from "../lib/axios";
+import keywords from "../constants/MetaKeywords";
 
 export const dynamic = "force-dynamic";
 
@@ -9,6 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "مدونة أبصر | أنظمة الأمان والمراقبة",
     description: "مدونة ابصر | كل ما يخص أنظمة الأمان والمراقبة",
+    keywords: keywords,
     openGraph: {
       title: "المدونة",
       description: "مدونة ابصر | كل ما يخص أنظمة الأمان والمراقبة",

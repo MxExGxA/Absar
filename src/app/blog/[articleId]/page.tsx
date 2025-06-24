@@ -6,6 +6,7 @@ import { articleType } from "../types/Article";
 import { Metadata } from "next";
 import axiosInstance from "@/app/lib/axios";
 import BlockContainer from "../components/BlockContainer";
+import keywords from "@/app/constants/MetaKeywords";
 
 export const dynamic = "force-dynamic";
 
@@ -25,6 +26,7 @@ export async function generateMetadata({
   return {
     title: article.data[0].title,
     description: article.data[0].description,
+    keywords: keywords,
     openGraph: {
       title: article.data[0].title,
       description: article.data[0].description,
