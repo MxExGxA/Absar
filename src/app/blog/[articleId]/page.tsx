@@ -67,7 +67,7 @@ const page = async ({ params }) => {
 
   return (
     <section className="container mx-auto py-10 px-3 font-jf flex items-start justify-between flex-col xl:flex-row">
-      <div className="max-w-[800px] 2xl:max-w-[1000px] prose prose-green prose-headings:text-lemon-green prose-ul:text-white prose-ol:text-white prose-img:max-h-96 prose-img:w-full prose-img:rounded-md prose-img:object-cover prose-blockquote:text-neutral-300 prose-img:cover prose-p:text-white">
+      <div className="max-w-[800px] 2xl:max-w-[1000px] prose prose-green prose-strong:text-white prose-a:font-bold prose-headings:text-lemon-green prose-ul:text-white prose-ol:text-white prose-li:marker:text-white prose-img:max-h-96 prose-img:w-full prose-img:rounded-md prose-img:object-cover prose-blockquote:text-neutral-300 prose-img:cover prose-p:text-white">
         <h1 className="text-white font-ghaith text-2xl lg:text-3xl">
           {article.data[0].title}
         </h1>
