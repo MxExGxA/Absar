@@ -57,10 +57,14 @@ const BlogBurger = () => {
         initial={{ x: "-100%" }}
         animate={toggleMenu ? { x: 0 } : { x: "-100%" }}
         className="fixed top-0 left-0 w-full h-lvh bg-lemon-green text-light-green font-ghaith flex justify-center items-center"
+        onClick={() => setToggleMenu(!toggleMenu)}
       >
         <ul className="flex flex-col items-center space-y-10 text-4xl">
           <li>
             <Link href={"/"}>الرئيــسية</Link>
+          </li>
+          <li>
+            <Link href={"/blog"}>المدونة</Link>
           </li>
         </ul>
       </motion.div>

@@ -4,6 +4,7 @@ import NavButton from "./NavButton";
 import Image from "next/image";
 import BurgerMenu from "./BurgerMenu";
 import UseInView from "@/app/hooks/useInView";
+import Link from "next/link";
 
 const DynamicNav = () => {
   const [navData, setNavData] = useState([
@@ -29,6 +30,12 @@ const DynamicNav = () => {
       id: 4,
       path: "#contact",
       title: "تواصل معنا",
+      selected: false,
+    },
+    {
+      id: 5,
+      path: "/blog",
+      title: "المدونـة",
       selected: false,
     },
   ]);
@@ -77,12 +84,14 @@ const DynamicNav = () => {
         } pt-3 pb-4 flex justify-between items-center fixed w-full top-0 left-0 px-5 md:px-9 font-jf z-50 bg-dark-green/60 backdrop-blur-2xl`}
       >
         {scrollY >= 110 ? (
-          <Image
-            src={"absar-logo.svg"}
-            alt="main absar logo"
-            height={0}
-            width={120}
-          />
+          <Link href={"/"}>
+            <Image
+              src={"absar-logo.svg"}
+              alt="main absar logo"
+              height={0}
+              width={120}
+            />
+          </Link>
         ) : (
           <div></div>
         )}
