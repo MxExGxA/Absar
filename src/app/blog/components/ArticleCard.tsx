@@ -18,7 +18,6 @@ const ArticleCard = ({
     .replaceAll(" ", "-")}`;
   return (
     <Link
-      replace
       href={`${articleLink}`}
       className={`relative bg-light-green rounded-md max-md:!col-span-1 flex flex-col overflow-hidden hover:md:scale-[1.03] transition-transform duration-300
         ${type === "large" && "col-span-2"}`}
