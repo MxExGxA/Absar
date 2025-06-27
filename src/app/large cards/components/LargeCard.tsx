@@ -57,9 +57,9 @@ const LargeCard = ({
         </div>
         <div className="w-full lg:w-1/2 h-82 flex flex-col items-start justify-evenly">
           <div className="relative w-fit flex flex-col items-start py-10">
-            <h1 className="font-jf text-[150px] 2xl:text-[200px] leading-[200px] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <h2 className="font-jf text-[150px] 2xl:text-[200px] leading-[200px] text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               {number}
-            </h1>
+            </h2>
             <h2 className="font-ghaith text-nowrap text-3xl lg:text-4xl 2xl:text-5xl text-light-green z-10">
               {title}
             </h2>
