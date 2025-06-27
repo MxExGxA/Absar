@@ -20,24 +20,26 @@ const Hero = () => {
       <div>
         {/* hero banner */}
         <div className="mt-10 flex flex-col lg:flex-row items-center md:items-start  lg:space-x-10">
-          <div className="font-ghaith text-4xl sm:text-6xl lg:text-5xl leading-[65px] text-white w-fit text-nowrap">
+          <h1 className="font-ghaith text-4xl sm:text-6xl lg:text-5xl leading-[65px] text-white w-fit text-nowrap">
             <div className="relative">
-              <h1 className="relative">أحــــــدث أ نظـــــــــمة</h1>
+              <div className="relative">
+                أحــــــدث أ نظـــــــــمة
+              </div>
               <div className="h-4 bg-lemon-green opacity-70 absolute bottom-3 left-0 w-full -z-10"></div>
             </div>
             <div className="relative">
-              <h1 className="relative">
+              <div className="relative">
                 الأمـــان و المراقبـــــــــ
-              </h1>
+              </div>
               <div className="h-4 bg-lemon-green opacity-70 absolute bottom-3 left-0 w-full -z-10"></div>
             </div>
             <div className="relative">
-              <h1 className="relative">
+              <div className="relative">
                 &nbsp; ــــة من أبصـــــــــــــــر
-              </h1>
+              </div>
               <div className="h-4 bg-lemon-green opacity-70 absolute bottom-3 left-0 w-full -z-10"></div>
             </div>
-          </div>
+          </h1>
           <div className="seperator hidden lg:block w-[2px] h-40 bg-white rounded-full"></div>
           <div className="text-white font-jf text-xl leading-9">
             <div className="mb-5">

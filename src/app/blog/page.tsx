@@ -35,7 +35,6 @@ const page = async () => {
     `/api/article?populate=cover`
   );
   const articles = await result.data;
-  console.log(articles);
 
   return (
     <section className="px-3 md:px-10" id="contact">
